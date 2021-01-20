@@ -23,7 +23,8 @@ export default class AddNote extends Component {
     fetch(`${config.API_ENDPOINT}/notes`, {
       method: 'POST',
       headers: {
-        'content-type': 'application/json'
+        'content-type': 'application/json',
+        'authorization': `bearer ${config.API_KEY}`
       },
       body: JSON.stringify(newNote),
     })
@@ -34,7 +35,7 @@ export default class AddNote extends Component {
       })
       .then(note => {
         this.context.addNote(note)
-        this.props.history.push(`/folder/${note.folder_id}`)
+        this.props.history.push(`/folders/${note.folder_id}`)
       })
       .catch(error => {
         console.error({ error })
