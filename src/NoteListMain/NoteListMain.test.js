@@ -24,7 +24,7 @@ describe(`NoteListMain component`, () => {
           "id": "cbc787a0-ffaf-11e8-8eb2-f2801f1b9fd1",
           "title": "Dogs",
           "modified": "2019-01-03T00:00:00.000Z",
-          "folder_id": "b0715efe-ffaf-11e8-8eb2-f2801f1b9fd1",
+          "folder_id": "1",
           "content": "Corporis accusamus placeat.\n \rUnde."
         },
         {
@@ -45,7 +45,7 @@ describe(`NoteListMain component`, () => {
           "id": "d26e0570-ffaf-11e8-8eb2-f2801f1b9fd1",
           "title": "Birds",
           "modified": "2019-01-04T00:00:00.000Z",
-          "folder_id": "b0715efe-ffaf-11e8-8eb2-f2801f1b9fd1",
+          "folder_id": "1",
           "content": "Eum culpa odit."
         },
       ]

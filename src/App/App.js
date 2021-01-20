@@ -26,7 +26,13 @@ class App extends Component {
 					'Authorization': `Bearer ${config.API_KEY}`,
 				},
 			}),
-			fetch(`${config.API_ENDPOINT}/folders`),
+			fetch(`${config.API_ENDPOINT}/folders`, {
+        method: 'GET',
+				headers: {
+					'content-type': 'application/json',
+					'Authorization': `Bearer ${config.API_KEY}`,
+				},
+      }),
 		])
 			.then(([notesRes, foldersRes]) => {
 				if (!notesRes.ok) return notesRes.json().then((e) => Promise.reject(e));
@@ -64,10 +70,10 @@ class App extends Component {
 	renderNavRoutes() {
 		return (
 			<>
-				{['/', '/folder/:folderId'].map((path) => (
+				{['/', '/folders/:folderId'].map((path) => (
 					<Route exact key={path} path={path} component={NoteListNav} />
 				))}
-				<Route path='/note/:noteId' component={NotePageNav} />
+				<Route path='/notes/:noteId' component={NotePageNav} />
 				<Route path='/add-folder' component={NotePageNav} />
 				<Route path='/add-note' component={NotePageNav} />
 			</>
@@ -77,10 +83,10 @@ class App extends Component {
 	renderMainRoutes() {
 		return (
 			<>
-				{['/', '/folder/:folderId'].map((path) => (
+				{['/', '/folders/:folderId'].map((path) => (
 					<Route exact key={path} path={path} component={NoteListMain} />
 				))}
-				<Route path='/note/:noteId' component={NotePageMain} />
+				<Route path='/notes/:noteId' component={NotePageMain} />
 				<Route path='/add-folder' component={AddFolder} />
 				<Route path='/add-note' component={AddNote} />
 			</>
