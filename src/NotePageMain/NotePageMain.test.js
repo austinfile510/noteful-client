@@ -14,13 +14,13 @@ describe(`NotePageMain component`, () => {
     const props = {
       match: {
         params: {
-          noteId: 'cbc787a0-ffaf-11e8-8eb2-f2801f1b9fd1'
+          noteId: '1'
         }
       }
     }
     const context = {
       notes: [{
-        id: `cbc787a0-ffaf-11e8-8eb2-f2801f1b9fd1`,
+        id: `1`,
         title: `Dogs`,
         modified: `2019-01-03T00:00:00.000Z`,
         folder_id: b0715efe-ffaf-11e8-8eb2-f2801f1b9fd1,
@@ -37,7 +37,7 @@ describe(`NotePageMain component`, () => {
     const props = {
       match: {
         params: {
-          noteId: 'cbc787a0-ffaf-11e8-8eb2-f2801f1b9fd1'
+          noteId: '1'
         }
       }
     }
@@ -46,7 +46,7 @@ describe(`NotePageMain component`, () => {
       {
         notes: [
           {
-            id: `cbc787a0-ffaf-11e8-8eb2-f2801f1b9fd1`,
+            id: `1`,
             content: "Content with n r.\n \rafter n r.",
           }
         ]
@@ -54,7 +54,7 @@ describe(`NotePageMain component`, () => {
       {
         notes: [
           {
-            id: `cbc787a0-ffaf-11e8-8eb2-f2801f1b9fd1`,
+            id: `1`,
             content: "Content with n.\nafter."
           }
         ]
