@@ -1,9 +1,9 @@
 export default {
-	API_ENDPOINT: `http://localhost:8000/api`,
+	API_ENDPOINT: `https://pacific-mountain-23937.herokuapp.com/`,
 	API_KEY: process.env.REACT_APP_API_KEY,
-	DB_URL:
-		process.env.DB_URL || 'postgresql://postgres:wetbeverage@localhost/noteful',
-	TEST_DB_URL:
-		process.env.DB_URL ||
+	DATABASE_URL:
+		process.env.DATABASE_URL || 'postgresql://postgres:wetbeverage@localhost/noteful',
+	TEST_DATABASE_URL:
+		process.env.DATABASE_URL ||
 		'postgresql://postgres:wetbeverage@localhost/noteful-test',
 };
